@@ -1,0 +1,36 @@
+<section class="crypto_table">
+  <div class="container mt-5">
+    <div id="top">
+      <div class="bg-dark table table-responsive table-fixed">
+        <table class="table table-striped table-hover table-bordered text-white" id="example">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>24h</th>
+              <th>24h Volume</th>
+              <th>Market Cap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let market of marketsOverview">
+              <td>
+                <div class="d-flex align-items-center">
+                  <img [src]="getLogoUrl(market.baseAsset)" alt="{{ market.baseAsset }}" class="icons"/>
+                  <span class="pl-2">{{ market.baseAsset }} {{ market.symbol }}</span>
+                </div>
+              </td>
+              <td>$ {{ getTicker(market.symbol).lastPrice || 'N/A' }}</td>
+              <td [class.text-danger]="getTicker(market.symbol).priceChangePercent < 0" [class.text-success]="getTicker(market.symbol).priceChangePercent >= 0">
+                {{ getTicker(market.symbol).priceChangePercent || 'N/A' }}%
+              </td>
+            
+              <td>$ {{ getTicker(market.symbol).quoteVolume || 'N/A' }}</td>
+              <td>$ {{ getTicker(market.symbol).weightedAvgPrice || 'N/A' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="sell-container">
+    <h2>Sell Order</h2>
+    <ag-grid-angular
+      style="width: 100%; height: 500px"
+      class="ag-theme-quartz fadeIn"
+      [rowData]="sellOrder"
+      [defaultColDef]="defaultColDef"
+      [columnDefs]="colDef"
+      [gridOptions]="sellGridOptions"
+    >
+    </ag-grid-angular>
+  </div>
+  <div class="buy-container">
+    <h2>Buy Order</h2>
+    <ag-grid-angular
+      style="width: 100%; height: 500px"
+      class="ag-theme-quartz fadeIn"
+      [rowData]="buyOrder"
+      [defaultColDef]="defaultColDef"
+      [columnDefs]="colDef"
+      [gridOptions]="buyGridOptions"
+    >
+    </ag-grid-angular>
+  </div>
+</div>

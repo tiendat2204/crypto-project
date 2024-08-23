@@ -1,0 +1,47 @@
+.sell-container{
+    width: 80%;
+    margin: auto;
+}
+.change-positive {
+    color: green;
+  }
+  
+  .change-negative {
+    color: red;
+  }
+  
+  .coin-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ag-theme-quartz .ag-cell {
+    color: white;
+    font-weight: bold;
+  }
+  .ag-theme-quartz-dark {
+    --ag-foreground-color: rgb(126, 46, 132);
+    --ag-background-color: rgb(249, 245, 227);
+    --ag-header-foreground-color: rgb(204, 245, 172);
+    --ag-header-background-color: rgb(209, 64, 129);
+    --ag-odd-row-background-color: rgb(0, 0, 0, 0.03);
+    --ag-header-column-resize-handle-color: rgb(126, 46, 132);
+
+    --ag-font-size: 17px;
+    --ag-font-family: monospace;
+}
+.success {
+  color: #46e372 !important;
+  background-color: #46e3721a !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  border-radius: 20px !important;
+  padding: 5px 12px !important;
+}
+
+.lose {
+  color: #ff005c !important;
+  background-color: #ff005c30 !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  border-radius: 20px !important;
+  padding: 5px 12px !important;
+}
